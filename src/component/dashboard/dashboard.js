@@ -5,9 +5,30 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 import "./dashboard.css";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 function Dashboard() {
   const [loading, setloading] = React.useState(true);
-
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 10,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <React.Fragment>
       {/* {loading ? <div className="myLoader">
@@ -47,8 +68,8 @@ function Dashboard() {
           </div>
           <div className="right_sidenav">
             <div className="search_box">
-              <input type="text"></input>
-              <button>Search</button>
+              <input type="text" placeholder = "Search"></input>
+              <button><i className="fa fa-search" aria-hidden="true"></i></button>
             </div>
           </div>
         </div>
@@ -56,8 +77,12 @@ function Dashboard() {
           <button>
             <i className="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;Play
           </button>
-          <button><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;My List</button>
-          <button><i class="fa fa-info" aria-hidden="true"></i>&nbsp;&nbsp;More Info</button>
+          <button>
+            <i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;My List
+          </button>
+          <button>
+            <i class="fa fa-info" aria-hidden="true"></i>&nbsp;&nbsp;More Info
+          </button>
         </div>
       </div>
       <div className="fadded_bottom"></div>
@@ -65,12 +90,25 @@ function Dashboard() {
       <div className="section1">
         <h3>Comedy Movies</h3>
         <div className="cards_images">
+          {/* <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
           <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
           <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
           <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
           <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
-          <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
-          <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+          <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img> */}
+          <Carousel
+            responsive={responsive}
+            swipeable={true}
+            autoPlay={true}
+            autoPlaySpeed={5000}
+          >
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+            <img src="https://www.themoviedb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"></img>
+          </Carousel>
         </div>
       </div>
     </React.Fragment>
