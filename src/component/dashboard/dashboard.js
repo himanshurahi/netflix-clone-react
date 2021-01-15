@@ -10,6 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 
 function Dashboard() {
   const [loading, setloading] = React.useState(true);
+  const [menu, setmenu] = React.useState(false);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,6 +29,10 @@ function Dashboard() {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
+  };
+
+  const openMenu = () => {
+    setmenu(!menu);
   };
 
   React.useEffect(() => {
@@ -60,7 +65,7 @@ function Dashboard() {
         }}
       >
         <div className="top_navbar">
-          <div className="logo">
+          <div className="dashboard_logo">
             <img
               src="https://www.abacustechnologies.com/wp-content/uploads/2020/05/580b57fcd9996e24bc43c529.png"
               width={100}
@@ -91,9 +96,32 @@ function Dashboard() {
               </button>
             </div>
           </div>
+          <div className="right_sidenav_mobile">
+            <ul>
+              <li>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+              </li>
+              <li className="profile" onClick={openMenu}>
+                Profile&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+              </li>
+            </ul>
+            <div
+              className="profile_dropdown"
+              style={menu ? { display: "block" } : { display: "none" }}
+            >
+              <ul>
+                <li className="account">
+                  <a>Account</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="hero_buttons">
-          <button style = {{marginLeft : "0px"}}>
+          <button style={{ marginLeft: "0px" }}>
             <i className="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;Play
           </button>
           <button>

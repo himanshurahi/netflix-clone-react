@@ -21,8 +21,9 @@ html {
   padding: 0px 20px;
 }
 
-.logo {
+.dashboard_logo {
   display: flex;
+ 
 }
 
 .navbar_items {
@@ -116,7 +117,7 @@ html {
   position: fixed;
   height: 100%;
   width: 100%;
-  display: none ;
+  display: none;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -145,6 +146,43 @@ html {
   font-size: 1.5rem;
 }
 
+.right_sidenav_mobile {
+  color: white;
+  position: relative;
+  display: none;
+}
+.right_sidenav_mobile ul {
+  list-style: none;
+  display: flex;
+}
+
+.right_sidenav_mobile li {
+  margin-left: 1rem;
+}
+
+.profile_dropdown {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 100%;
+  display: none;
+
+  transition-duration: 1s;
+}
+
+.profile_dropdown ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile_dropdown li {
+  margin-left: 0px;
+}
+.profile {
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
   .navbar_items {
     display: none;
@@ -153,5 +191,21 @@ html {
     width: 100%;
     margin-left: 0px;
     text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .right_sidenav {
+    display: none;
+  }
+
+  .right_sidenav_mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero_buttons button {
+    margin-left: 0.1rem;
   }
 }

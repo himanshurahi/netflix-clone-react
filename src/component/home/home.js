@@ -6,33 +6,13 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 import Loader from "react-loader-spinner";
 import Footer from "../footer/footer";
+import Navbar from "./navbar/navbar";
 
 function Home() {
   return (
     <React.Fragment>
       <div className="main_hero" style={{ height: "500px" }}>
-        <div className="top_header">
-          <div className="logo">
-            <Link
-              to="/
-            "
-            >
-              <img
-                src="https://www.abacustechnologies.com/wp-content/uploads/2020/05/580b57fcd9996e24bc43c529.png"
-                width={100}
-                alt="netflix_logo"
-              />
-            </Link>
-          </div>
-          <div className="navbar">
-            <ul>
-              <li>
-                <Link to="/login">Login</Link>
-                {/* <a>Login</a> */}
-              </li>
-            </ul>
-          </div>
-        </div>
+       <Navbar />
         <div className="main_banner">
           <h1>Unlimited movies, TV shows and more.</h1>
           <h3>Watch anywhere. Cancel anytime.</h3>
