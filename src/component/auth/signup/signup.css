@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+h1,
+h2,
+h4 {
+  font-weight: lighter;
+}
+
+html {
+  line-height: 2;
+
+  /* background-image: url("https://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg"); */
+}
+
+.main_hero {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      transparent,
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("https://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.top_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_header ul li {
+  list-style: none;
+  background-color: red;
+  margin: 0 2rem;
+  padding: 0px 20px;
+  border-radius: 5px;
+}
+
+.top_header ul li a {
+  color: black;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.top_header .logo {
+  margin: 0 2rem;
+  display: flex;
+}
+
+.login_f {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_f input {
+  padding: 15px 0px;
+  width: 60%;
+  margin: 10px auto;
+  background-color: #333333;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  text-indent: 20px;
+}
+
+.signup_form {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 600px;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.signup_form h2 {
+  width: 60%;
+  margin: auto;
+  font-size: 4rem;
+}
+
+/* .login_f ::placeholder{
+    padding: 20px;
+} */
+
+.login_f button {
+  width: 60%;
+  margin: auto;
+  padding: 16px 0px;
+  border: 0px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.error {
+  margin-right: 200px;
+}
+
+footer {
+  display: grid;
+  background-color: black;
+  grid-template-rows: 150px 50px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 5px 50px;
+}
+footer ul {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.select_language select {
+  padding: 10px;
+  background: none;
+  color: white;
+}
+.select_language option {
+  background: none;
+}
+
+.copyright_text {
+  color: white;
+}
+
+.signup_text {
+  width: 60%;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.signup_text h4 {
+  float: left;
+}
+.signup_text a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 740px) {
+  .signup_form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login_f input {
+    width: 90%;
+  }
+  .signup_form h2 {
+    text-align: center;
+  }
+}

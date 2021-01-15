@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+button[type="submit"]:disabled {
+  background: #dddddd;
+ 
+}
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+html {
+  line-height: 2;
+
+  /* background-image: url("https://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg"); */
+}
+
+.main_hero {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      transparent,
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("https://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.top_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_header ul li {
+  list-style: none;
+  background-color: red;
+  margin: 0 2rem;
+  padding: 0px 20px;
+  border-radius: 5px;
+}
+
+.top_header ul li a {
+  color: black;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.top_header .logo {
+  margin: 0 2rem;
+  display: flex;
+}
+
+.main_banner {
+  margin-top: 50px;
+  line-height: 1.7;
+}
+
+.main_banner h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.main_banner h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.main_banner h4 {
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.main_banner input {
+  border: 0px;
+  padding: 15px 0px;
+  border-radius: 0px;
+  text-indent: 20px;
+}
+
+.get_started {
+  display: flex;
+  justify-content: center;
+}
+
+.get_started input {
+  width: 40%;
+}
+
+.main_banner button {
+  background-color: red;
+  color: white;
+  border: 0px;
+  padding: 0px 40px;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.offline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: black;
+  color: white;
+  /* height: 300px; */
+  border-top: 5px solid #626262;
+  border-bottom: 5px solid #626262;
+}
+
+.offline_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.offline_image {
+  text-align: center;
+}
+
+.offline_image img {
+  width: 70%;
+}
+
+footer {
+  display: grid;
+  background-color: black;
+  grid-template-rows: 150px 50px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 5px 50px;
+}
+footer ul {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.select_language select {
+  padding: 10px;
+  background: none;
+  color: white;
+}
+.select_language option {
+  background: none;
+}
+
+.copyright_text {
+  color: white;
+}
+
+@media (max-width: 816px) {
+  .offline {
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .offline {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .main_banner h1 {
+    font-size: 2.5rem;
+  }
+  .main_banner h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main_banner h1 {
+    font-size: 2.5rem;
+  }
+  .main_banner h4 {
+    font-size: 1.2rem;
+  }
+
+  .get_started {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  .get_started input {
+    width: 100%;
+  }
+
+  .main_banner button {
+    padding: 12px 0px;
+    width: 60%;
+    margin: auto;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .offline_text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .main_banner h1 {
+    line-height: 1;
+  }
+  .main_banner h4 {
+    font-size: 1.2rem;
+    padding: 0px 12px;
+  }
+
+  .main_banner h3 {
+    font-size: 1.4rem;
+  }
+
+  .offline_text {
+    font-size: 0.7rem;
+  }
+}
