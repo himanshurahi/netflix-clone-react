@@ -29,17 +29,34 @@ function Dashboard() {
       items: 1,
     },
   };
+
+  React.useEffect(() => {
+    document.title = "Dashboard | netflix";
+  }, []);
   return (
     <React.Fragment>
       {/* {loading ? <div className="myLoader">
         <Loader type="Oval" color="white" height={40} width={40} />
         <p>Please Wait</p>
       </div> : "Final"} */}
-
+      <div className="backdrop"></div>
+      <div className="mobile_nav">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">TV Shows</Link>
+          </li>
+          <li>
+            <Link to="/">Movies</Link>
+          </li>
+        </ul>
+      </div>
       <div
         className="dashboard_hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9),transparent,rgba(0, 0, 0, 0.9)),url(${"https://www.themoviedb.org/t/p/original/hd8H2TvqtAbqYnBUbf5AdXZf87s.jpg"})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),transparent,rgba(0, 0, 0, 0.9)),url(${"https://www.themoviedb.org/t/p/original/hd8H2TvqtAbqYnBUbf5AdXZf87s.jpg"})`,
         }}
       >
         <div className="top_navbar">
@@ -68,13 +85,15 @@ function Dashboard() {
           </div>
           <div className="right_sidenav">
             <div className="search_box">
-              <input type="text" placeholder = "Search"></input>
-              <button><i className="fa fa-search" aria-hidden="true"></i></button>
+              <input type="text" placeholder="Search"></input>
+              <button>
+                <i className="fa fa-search" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
         </div>
         <div className="hero_buttons">
-          <button>
+          <button style = {{marginLeft : "0px"}}>
             <i className="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;Play
           </button>
           <button>
