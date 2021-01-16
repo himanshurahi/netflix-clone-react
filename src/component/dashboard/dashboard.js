@@ -61,21 +61,16 @@ function Dashboard() {
   ) : (
     <React.Fragment>
       <div
-        className="backdrop"
-        style={
-          mobilemenu
-            ? { opacity: "1", visibility: "visible" }
-            : { opacity: "0" }
-        }
+        className={mobilemenu ? "backdrop active" : "backdrop"}
         onClick={openMobileMenu}
       ></div>
       <div
-        className="mobile_nav"
-        style={
-          mobilemenu
-            ? { width: "250px", marginLeft: "0px" }
-            : { width: "0px", marginLeft: "-250px" }
-        }
+        className={mobilemenu ? "mobile_nav active" : "mobile_nav"}
+        // style={
+        //   mobilemenu
+        //     ? { width: "250px", marginLeft: "0px" }
+        //     : { width: "0px", marginLeft: "-250px" }
+        // }
       >
         <div className="close_menu" onClick={openMobileMenu}>
           <i class="fa fa-times" aria-hidden="true"></i>
@@ -145,8 +140,10 @@ function Dashboard() {
             </ul>
 
             <div
-              className="profile_dropdown"
-              style={menu ? { opacity: "1" } : { opacity: "0" }}
+              className={
+                menu ? "profile_dropdown active" : "profile_dropdown   "
+              }
+              //   style={menu ? { opacity: "1" } : { opacity: "0" }}
             >
               <ul>
                 <li className="account">

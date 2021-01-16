@@ -124,14 +124,23 @@ html {
   visibility: hidden;
 }
 
+.backdrop.active {
+  opacity: 1;
+}
+
 .mobile_nav {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background-color: black;
   height: 100%;
   width: 240px;
+  left: -100%;
   box-shadow: 1px 10px 20px black;
   transition: all ease-in-out 0.4s;
+}
+
+.mobile_nav.active {
+  left: 0;
 }
 .mobile_nav ul {
   display: flex;
@@ -167,6 +176,11 @@ html {
   color: black;
   width: 100%;
   transition: all ease-in-out 0.1s;
+  opacity: 0;
+}
+
+.profile_dropdown.active {
+  opacity: 1;
 }
 
 .profile_dropdown ul {
