@@ -23,7 +23,6 @@ html {
 
 .dashboard_logo {
   display: flex;
- 
 }
 
 .navbar_items {
@@ -165,9 +164,7 @@ html {
   background-color: white;
   color: black;
   width: 100%;
-  display: none;
-
-  transition-duration: 1s;
+  
 }
 
 .profile_dropdown ul {
