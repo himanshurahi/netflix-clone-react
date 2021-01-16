@@ -54,6 +54,7 @@ html {
 .section1 {
   color: white;
   padding: 0px 30px;
+  border-bottom: 5px solid grey;
 }
 
 .section1 img {
@@ -116,21 +117,22 @@ html {
   position: fixed;
   height: 100%;
   width: 100%;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  transition: all ease-in-out 0.2s;
+  visibility: hidden;
 }
 
 .mobile_nav {
   position: fixed;
-  z-index: 101;
+  z-index: 1;
   background-color: black;
   height: 100%;
-  width: 244px;
+  width: 240px;
   box-shadow: 1px 10px 20px black;
-  display: none;
+  transition: all ease-in-out 0.4s;
 }
-
 .mobile_nav ul {
   display: flex;
   flex-direction: column;
@@ -164,7 +166,7 @@ html {
   background-color: white;
   color: black;
   width: 100%;
-  
+  transition: all ease-in-out 0.1s;
 }
 
 .profile_dropdown ul {
@@ -180,6 +182,17 @@ html {
   cursor: pointer;
 }
 
+.close_menu {
+  color: white;
+  position: absolute;
+  left: 90%;
+}
+
+.mobile_menu_icon {
+  color: white;
+  display: none;
+}
+
 @media (max-width: 750px) {
   .navbar_items {
     display: none;
@@ -188,6 +201,10 @@ html {
     width: 100%;
     margin-left: 0px;
     text-align: center;
+  }
+
+  .mobile_menu_icon {
+    display: block;
   }
 }
 
